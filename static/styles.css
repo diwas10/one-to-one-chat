@@ -1,3 +1,7 @@
+:root {
+    --primary: #39c0ed;
+}
+
 html::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -19,17 +23,22 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 body {
-    color: #4f4f4f;
+    color: #e8e8e8;
     width: 60%;
     margin: auto;
     display: flex;
     height: 100vh;
     flex-direction: column;
     justify-content: center;
+    background: #3a3a3a !important;
 }
 
 .ml-auto {
     margin-left: auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 
@@ -39,7 +48,7 @@ body {
 
 .header {
     color: white;
-    background: #39c0ed;
+    background: var(--primary);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     text-align: center;
@@ -47,18 +56,25 @@ body {
     padding: 1rem;
 }
 
+.user-col {
+    background: #1f2029;
+}
+
 .all-content {
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    border-radius: 1rem;
+    box-shadow: 0 3px 10px rgba(84, 84, 84, 0.2);
+    border-radius: 1rem !important;
+    /*overflow: hidden;*/
 }
 
 .chat-content {
-    padding: 1rem;
     /*border-bottom-left-radius: 1rem;*/
     /*border-bottom-right-radius: 1rem;*/
-    height: 60vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
+    background: #17181f;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 ul {
@@ -67,12 +83,12 @@ ul {
     flex-direction: column;
     list-style: none;
     flex-grow: 1;
-    padding-left: 0;
+    padding: 1rem;
 }
 
 li.message {
     padding: 1rem;
-    background: #d7f3fc;
+    background: #30333f;
     border-radius: 1rem;
     /*box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);*/
     width: fit-content;
@@ -83,9 +99,51 @@ li.message {
 .user-item {
     cursor: pointer;
     padding: 1rem;
-    border-bottom: 1px solid #dee2e6;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: #30333f;
+    border-radius: 1rem;
 }
 
 .user-item.active {
-    background: #d7f3fc;
+    color: var(--primary);
+}
+
+.form-control {
+    background: #30333f;
+    border: none;
+}
+
+.form-control:focus {
+    background: #30333f;
+    border: none;
+}
+
+.user-container {
+    background: #1f2029;
+}
+
+.border-end {
+    border-right: 1px solid #3a3a3a !important;
+}
+
+.user-col {
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #3a3a3a !important;
+}
+
+.input-group {
+    padding: 1rem;
+}
+
+button.btn {
+    background: #fbf2d1 !important;
+}
+
+button.btn:hover, button.btn:focus {
+    color: #212529 !important;
 }

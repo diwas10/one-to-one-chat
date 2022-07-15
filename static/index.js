@@ -81,8 +81,8 @@ const appendUser = (users) => {
 
     const onNodeClick = (node, user) => {
         node.addEventListener("click", (e) => {
-            userContainer.value = user;
             selectedChatUser = user;
+            document.querySelector("#active_user").textContent = user;
             userContainer.querySelector(".active")?.classList?.remove("active")
             e.target.classList.add("active");
             fetchUserChat(user);
@@ -136,7 +136,7 @@ fetch(`/chat/users?user=${getAuthData()}`).then(res => res.json()).then(users =>
     users = users.data
     if (users?.length) {
         fetchUserChat(users[0]);
-        userContainer.value = users[0];
+        document.querySelector("#active_user").textContent = users[0];
         selectedChatUser = users[0];
         userList = [...chatData, ...users]
         appendUser();

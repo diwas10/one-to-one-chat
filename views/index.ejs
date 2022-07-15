@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Socket Example</title>
+</head>
+<link href="/styles.css" rel="stylesheet">
+<body>
+<h1 id="user" class="text-center"></h1>
+
+<h1 id="connection"></h1>
+
+<div class="row all-content">
+    <div class="bg-primary p-3 header">Live Chat</div>
+    <div class="col-4 p-0 border-end">
+        <ul id="userContainer" class="h-100"></ul>
+    </div>
+    <div class="col-8">
+        <div class="chat">
+            <div class="chat-content">
+                <ul id="message"></ul>
+                <div class="input-group">
+                    <input class="form-control" id="input" onkeypress="handleEnterPress()"/>
+                    <button class="btn btn-primary" onclick="sendMessage()">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/index.js"></script>
+</body>
+</html>

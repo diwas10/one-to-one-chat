@@ -1,0 +1,91 @@
+html::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #d2d2d6;
+    border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #2f6fcf;
+    border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: #d2d2d6;
+    cursor: pointer;
+}
+
+body {
+    color: #4f4f4f;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.header {
+    color: white;
+    background: #39c0ed;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.all-content {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 1rem;
+}
+
+.chat-content {
+    padding: 1rem;
+    /*border-bottom-left-radius: 1rem;*/
+    /*border-bottom-right-radius: 1rem;*/
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    flex-grow: 1;
+    padding-left: 0;
+}
+
+li.message {
+    padding: 1rem;
+    background: #d7f3fc;
+    border-radius: 1rem;
+    /*box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);*/
+    width: fit-content;
+    max-width: 80%;
+    margin-top: 1rem;
+}
+
+.user-item {
+    cursor: pointer;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.user-item.active {
+    background: #d7f3fc;
+}

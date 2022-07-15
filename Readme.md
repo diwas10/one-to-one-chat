@@ -9,4 +9,4 @@
 - Socket broadcast new users
 - Play Notification sound on new message
 
-![img_1.png](img_1.png)
+![img_1.png](chat-image.png)
